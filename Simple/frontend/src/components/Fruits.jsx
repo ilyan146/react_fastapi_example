@@ -35,7 +35,7 @@ const FruitList = () => {
           <li key={index}>{fruit.name}</li>
         ))}
       </ul>
-      <AddFruitForm addFruit={addFruit} />
+      <AddFruitForm addFruit={addFruit} fruitCount={fruits.length} />
     </div>
   );
 };

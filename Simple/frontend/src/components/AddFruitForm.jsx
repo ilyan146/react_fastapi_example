@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import Counter from './Counter';
 
-const AddFruitForm = ({ addFruit }) => {
+const AddFruitForm = ({ addFruit, fruitCount}) => {
   const [fruitName, setFruitName] = useState('');
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,6 +22,9 @@ const AddFruitForm = ({ addFruit }) => {
         placeholder="Enter fruit name"
       />
       <button type="submit">Add Fruit</button>
+      <div>
+        <span>Fruit Count: {fruitCount}</span>
+      </div>
     </form>
   );
 };
